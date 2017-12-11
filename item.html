@@ -12,7 +12,7 @@
 		<input type="text" id="item-price" name="item_price" placeholder="Price">
 		<input type="text" id="item-category" name="item_category" placeholder="Category">
 		<textarea id="item-description" name="item_description" placeholder="Description..."></textarea>
-		<button type="button" id="add-item">Add</button>
+		<button type="button" id="add-item" onclick="addItem()">Add</button>
 	</form>
 	<ul id="food-item-list">
 		<li class="item-box">
@@ -79,5 +79,20 @@
 			<!-- Don't mind me. I'm okay. I promise. Hehe. -->
 		</li>
 	</ul>
+
+	<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyDcserCk77HrU-LFbdBUhY0TTWU4av7XAg",
+			authDomain: "fud-demo.firebaseapp.com",
+			databaseURL: "https://fud-demo.firebaseio.com",
+			projectId: "fud-demo",
+			storageBucket: "",
+			messagingSenderId: "820448936900"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<script type="text/javascript" src="js/item.js"></script>
 </body>
 </html>
